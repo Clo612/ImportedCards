@@ -7,48 +7,50 @@
     <style>
         /* Global Styles */
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #f4f5f7;
             margin: 0;
             padding: 0;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #1e2a47;
+            background-color: #2b3e52;
             color: white;
-            padding: 40px 20px;
+            padding: 30px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             margin-bottom: 10px;
         }
 
         header p {
             font-size: 1.1em;
-            color: #aaa;
+            color: #ddd;
         }
 
         main {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
-            padding: 40px;
+            padding: 50px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
+        /* Product Card */
         .product {
             background-color: white;
             border-radius: 10px;
             padding: 20px;
-            text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
         .product:hover {
@@ -58,8 +60,9 @@
 
         .product img {
             max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
             transition: transform 0.3s ease;
         }
 
@@ -68,14 +71,14 @@
         }
 
         .product h2 {
-            font-size: 1.7em;
+            font-size: 1.8em;
             color: #333;
-            margin-bottom: 10px;
+            margin: 20px 0 10px;
         }
 
         .product p {
             font-size: 1.2em;
-            color: #555;
+            color: #666;
             margin-bottom: 20px;
         }
 
@@ -83,11 +86,12 @@
             background-color: #3498db;
             color: white;
             font-size: 1.1em;
-            padding: 15px 25px;
+            padding: 12px 25px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
         }
 
         .product button:hover {
@@ -95,19 +99,28 @@
             transform: translateY(-2px);
         }
 
+        .product button:active {
+            transform: translateY(0);
+        }
+
+        /* Footer */
         footer {
-            background-color: #1e2a47;
+            background-color: #2b3e52;
             color: white;
             padding: 20px;
             text-align: center;
-            font-size: 1.1em;
+            font-size: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
         }
 
         footer p {
             margin: 0;
         }
 
-        /* Media Query for Small Screens */
+        /* Media Queries */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.5em;
@@ -127,7 +140,7 @@
 
     <header>
         <h1>Colin's Card Store</h1>
-        <p>Your premium destination for TCG products</p>
+        <p>Your premier destination for TCG products</p>
     </header>
 
     <main>
