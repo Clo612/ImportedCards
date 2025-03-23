@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <header>
-    <img src="ImportedCardGames.png" alt="Colin's Card Store Logo" style="width: 250px; height: auto;">
-</header>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="ImportedCardGames.png"> <!-- Favicon -->
+    <title></title> <!-- Title removed, logo will be placed here -->
     <style>
+        /* GENERAL STYLES */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            color: #333;
+            background-image: url('background.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
-        /* NAVIGATION BAR */
+        /* NAVIGATION */
         nav {
             background-color: #333;
             padding: 10px 0;
@@ -45,64 +46,183 @@
             color: #007BFF;
         }
 
-        /* HEADER */
-        header {
+        /* HEADER LOGO */
+        .header-logo {
             text-align: center;
-            padding: 20px;
-            background-color: white;
+            margin: 20px 0;
         }
 
-        header img {
-            width: 250px;
+        .header-logo img {
+            max-width: 200px; /* Adjust logo size */
             height: auto;
         }
 
-        /* MAIN CONTENT */
-        main {
+        /* SCROLLING MARQUEE */
+        marquee {
+            background: #ffcc00;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* SPECIAL ANNOUNCEMENT */
+        .announcement {
+            background-color: #ff5722;
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            text-align: center;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        /* BLOG PREVIEW SECTION */
+        .blog-preview {
+            padding: 40px;
+            background: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+        }
+
+        .blog-post h3 {
+            color: #007BFF;
+            font-size: 24px;
+        }
+
+        .blog-post p {
+            color: #555;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .blog-post a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .blog-post a:hover {
+            color: #0056b3;
+        }
+
+        /* FEATURED PRODUCTS SECTION */
+        .featured-products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .product {
+            background-color: #f8f8f8;
+            width: 22%;
+            margin: 10px 0;
             padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
             text-align: center;
         }
 
-        /* FOOTER */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
+        .product img {
             width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h4 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .product a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #007BFF;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+
+        .product a:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
+    <!-- HEADER LOGO -->
+    <div class="header-logo">
+        <!-- Replace 'logo.png' with your logo file -->
+        <img src="ImportedCardGames (1).png" alt="ImportedCardGames">
+    </div>
+
+    <!-- NAVIGATION -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
         </ul>
     </nav>
 
-    <!-- HEADER WITH LOGO -->
-    <header>
-        <img src="logo.png" alt="Colin's Card Store Logo">
-    </header>
+    <!-- SCROLLING ANNOUNCEMENT -->
+    <marquee behavior="scroll" direction="left">
+        🚀 Prize Pack Series One, for a limited time only! 🚀
+    </marquee>
 
-    <!-- MAIN CONTENT -->
-    <main>
-        <h2>Welcome to Colin's Card Store!</h2>
-        <p>Find the best Pokémon TCG products at competitive prices.</p>
-    </main>
+    <!-- SPECIAL ANNOUNCEMENT (Journey Together Orders) -->
+    <div class="announcement">
+        🚨 Journey Together Orders are being taken on April 11th! 🚨
+    </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Contact Us: info@colinscardstore.com</p>
-    </footer>
+    <!-- BLOG POST (One Blog Post) -->
+    <section class="blog-preview">
+        <h2>📝 Latest Blog Post</h2>
+
+        <div class="blog-post">
+            <h3>Is Journey Together going to be big?</h3>
+            <p>In this article, you will find out all the cards in the set, and if it will be a big set!</p>
+            <a href="blog-post1.html">Read More</a>
+        </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS SECTION -->
+    <section class="featured-products">
+        <div class="product">
+            <img src="booster-box.jpg" alt="Booster Box">
+            <h4>Pokémon Booster Box</h4>
+            <p>Get your hands on the latest Pokémon Booster Boxes! Limited stock available.</p>
+            <a href="https://www.tcgplayer.com">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img src="elite-trainer-box.jpg" alt="Elite Trainer Box">
+            <h4>Elite Trainer Box</h4>
+            <p>Perfect for collectors! Featuring exclusive cards and premium items.</p>
+            <a href="https://www.tcgplayer.com">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img src="shining-legend.jpg" alt="Shining Legends Pack">
+            <h4>Shining Legends Pack</h4>
+            <p>A rare set for the most dedicated collectors! Get yours today.</p>
+            <a href="https://www.tcgplayer.com">Buy Now</a>
+        </div>
+    </section>
 
 </body>
 </html>
