@@ -3,222 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImportedCardGames - Your Ultimate stop for singles and sealed!</title>
-    <link rel="icon" href="ImportedCardGames.png" type="image/x-icon">
+    <header>
+    <img src="ImportedCardGames.png" alt="Colin's Card Store Logo" style="width: 250px; height: auto;">
+</header>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        /* Global Styles */
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            color: #ffffff;
-            line-height: 1.6;
-            transition: all 0.3s ease-in-out;
-        }
-
-        /* Header */
-        header {
-            background-color: #ffffff;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            font-size: 3.2em;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin: 0;
-            color: #fff;
-        }
-
-        header p {
-            font-size: 1.1em;
-            color: #ddd;
-            margin-top: 10px;
-            font-weight: 300;
-        }
-
-        /* Main Layout */
-        main {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            padding: 50px;
-            max-width: 1200px;
-            margin: 0 auto;
-            transition: all 0.3s ease;
-        }
-
-        /* Product Cards */
-        .product {
-            background-color: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .product:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .product img {
-            max-width: 100%;
-            height: 240px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .product img:hover {
-            transform: scale(1.05);
-        }
-
-        .product h2 {
-            font-size: 1.7em;
             color: #333;
-            margin-bottom: 15px;
-            font-weight: 600;
         }
 
-        .product p {
-            font-size: 1.2em;
-            color: #777;
-            margin-bottom: 20px;
+        /* NAVIGATION BAR */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
         }
 
-        .product button {
-            background-color: #3498db;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
             color: white;
-            font-size: 1.1em;
-            padding: 14px 30px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
         }
 
-        .product button:hover {
-            background-color: #2980b9;
-            transform: translateY(-3px);
+        nav ul li a:hover {
+            color: #007BFF;
         }
 
-        .product button:active {
-            transform: translateY(0);
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
         }
 
-        /* Footer */
-        footer {
-            background-color: #2b3e52;
-            color: white;
+        header img {
+            width: 250px;
+            height: auto;
+        }
+
+        /* MAIN CONTENT */
+        main {
             padding: 20px;
             text-align: center;
-            font-size: 1.1em;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
-            position: relative;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
             bottom: 0;
             width: 100%;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            header p {
-                font-size: 1em;
-            }
-
-            main {
-                padding: 20px;
-            }
-
-            .product img {
-                height: 200px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER WITH LOGO -->
     <header>
-        <img src="ImportedCardGames (1).png" alt="Colin's Card Store Logo">
-        <h1>ImportedCardGames</h1>
+        <img src="logo.png" alt="Colin's Card Store Logo">
     </header>
 
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
     <main>
-        <!-- Product 1 -->
-        <div class="product">
-            <img src="482138_in_1000x1000.jpg" alt="Product 1">
-            <h2>Pokemon - Play! Pokemon Prize Pack Series One</h2>
-            <p>$52.99</p>
-            <p>Quanity: 5</p>
-            <a href="https://www.tcgplayer.com/product/482138/pokemon-miscellaneous-cards-and-products-pokemon?seller=192b60a7&page=1&Language=English" target="_blank">
-                <button>Buy on TCGPlayer</button>
-            </a>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product">
-            <img src="188400_in_1000x1000.jpg" alt="Product 2">
-            <h2>Pokemon - Unbroken Bonds Lightning Loop Theme Deck - [Zeraora] - SM - Unbroken Bonds (SM10)</h2>
-            <p>$32.99</p>
-            <a href="https://www.tcgplayer.com/product/188400/pokemon-sm-unbroken-bonds-pokemon?seller=192b60a7&page=1&Language=English" target="_blank">
-                <button>Buy on TCGPlayer</button>
-            </a>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product">
-            <img src="513793_in_1000x1000.jpg" alt="Product 3">
-            <h2>Pokemon - Lugia V - Prize Pack Series Cards</h2>
-            <p>$26.99</p>
-            <a href="https://www.tcgplayer.com/product/513793/pokemon-prize-pack-series-cards-pokemon?seller=192b60a7&page=1&Language=English" target="_blank">
-                <button>Buy on TCGPlayer</button>
-            </a>
-        </div>
+        <h2>Welcome to Colin's Card Store!</h2>
+        <p>Find the best Pokémon TCG products at competitive prices.</p>
     </main>
 
-    <div class="product">
-            <img src="220323_in_1000x1000.jpg" alt="Product 3">
-            <h2>Yu-Gi-Oh! - Maximum Gold Mini-Booster Pack [1st Edition] - Maximum Gold (MAGO)</h2>
-            <p>$8.99</p>
-            <a href="https://www.tcgplayer.com/product/220323/yugioh-maximum-gold-yugioh?seller=192b60a7&page=1&Language=English" target="_blank">
-                <button>Buy on TCGPlayer</button>
-            </a>
-        </div>
-    </main>
-
-    <div class="product">
-            <img src="208510_in_1000x1000.jpg" alt="Product 3">
-            <h2>Pokemon - Professor's Research (Secret) - SWSH01: Sword & Shield Base Set</h2>
-            <p>$3.99</p>
-            <a href="https://www.tcgplayer.com/product/208510/pokemon-swsh01-sword-and-shield-base-set-pokemon?seller=192b60a7&page=1&Language=English" target="_blank">
-                <button>Buy on TCGPlayer</button>
-            </a>
-        </div>
-    </main>
-
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-        <p>Contact Us: info@colinscardstore.com | &copy; 2025 Colin's Card Store</p>
+        <p>Contact Us: info@colinscardstore.com</p>
     </footer>
 
 </body>
