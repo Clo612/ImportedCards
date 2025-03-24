@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="cdn/favicon.ico">
-    <title>Blog - Imported Card Games</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('background.jpg'); /* Background image */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        /* HEADER LOGO */
-        .header-logo {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .header-logo img {
-            max-width: 200px;
-            height: auto;
-        }
-
         /* NAVIGATION */
         nav {
-            background-color: #333;
-            padding: 10px 0;
+            background-color: #222;
+            padding: 15px 0;
             text-align: center;
         }
 
@@ -50,78 +21,130 @@
             color: white;
             font-size: 18px;
             font-weight: bold;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #007BFF;
+            color: #ffcc00;
         }
 
-        /* SCROLLING MARQUEE */
-        marquee {
-            background: #ffcc00;
-            color: black;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 10px;
-        }
-
-        /* SPECIAL ANNOUNCEMENT */
-        .announcement {
-            background-color: #ff5722;
-            color: white;
-            font-size: 20px;
-            padding: 15px;
+        /* BLOG HEADER */
+        .blog-header {
             text-align: center;
-            margin: 10px;
-            font-weight: bold;
-        }
-
-        /* BLOG POST SECTION */
-        section.blog-preview {
-            padding: 40px 10%;
-        }
-
-        section.blog-preview h2 {
+            background: url('cdn/blog-banner.jpg') center/cover no-repeat;
+            padding: 50px 20px;
+            color: white;
             font-size: 36px;
-            color: #333;
-            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
         }
 
-        section.blog-preview .blog-post {
-            background-color: #f8f8f8;
-            margin: 20px 0;
+        /* BLOG CONTAINER */
+        .blog-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            gap: 20px;
             padding: 20px;
+        }
+
+        /* BLOG POSTS GRID */
+        .blog-posts {
+            flex: 3;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .blog-post {
+            background: white;
+            padding: 15px;
             border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
 
-        section.blog-preview .blog-post h3 {
-            font-size: 24px;
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .blog-post h3 {
+            font-size: 22px;
+            margin: 10px 0;
             color: #333;
-            margin-bottom: 10px;
         }
 
-        section.blog-preview .blog-post p {
-            font-size: 16px;
-            color: #777;
-            margin-bottom: 10px;
+        .blog-post p {
+            font-size: 14px;
+            color: #666;
         }
 
-        section.blog-preview .blog-post a {
+        .blog-post a {
+            display: inline-block;
+            margin-top: 10px;
             text-decoration: none;
             color: #007BFF;
             font-weight: bold;
         }
 
-        section.blog-preview .blog-post a:hover {
+        .blog-post a:hover {
             color: #0056b3;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .sidebar ul li a:hover {
+            color: #0056b3;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-
-    <!-- HEADER LOGO -->
-    <div class="header-logo">
+  
+   <div class="header-logo">
+        <!-- Replace 'logo.png' with your logo file -->
         <img src="cdn/logo.png" alt="ImportedCardGames">
     </div>
 
@@ -135,39 +158,64 @@
         </ul>
     </nav>
 
-    <!-- SCROLLING ANNOUNCEMENT -->
-    <marquee behavior="scroll" direction="left">
-        🚀 Buy Prize Pack Series One for $52.99, only for a limited time! 🚀
-    </marquee>
-
-    <!-- SPECIAL ANNOUNCEMENT (Journey Together Orders) -->
-    <div class="announcement">
-        🚨 Journey Together Orders are being taken on April 11th! 🚨
+    <!-- BLOG HEADER -->
+    <div class="blog-header">
+        Latest TCG News & Updates
     </div>
 
-    <!-- BLOG POST SECTION -->
-    <section class="blog-preview">
-        <h2>📝 Latest Blog Post</h2>
+    <!-- BLOG CONTENT -->
+    <div class="blog-container">
+        
+        <!-- BLOG POSTS -->
+        <div class="blog-posts">
+            
+            <div class="blog-post">
+                <img src="cdn/blog1.jpg" alt="Blog 1">
+                <h3>Is Journey Together the Best Set Yet?</h3>
+                <p>We break down the top cards, value, and why this set might be a game-changer!</p>
+                <a href="blog-post1.html">Read More</a>
+            </div>
 
-        <div class="blog-post">
-            <h3>Is Journey Together going to be big?</h3>
-            <p>In this article, you will find out all the cards in the set, and if it will be a big set!</p>
-            <a href="blog-post1.html">Read More</a>
+            <div class="blog-post">
+                <img src="cdn/blog2.jpg" alt="Blog 2">
+                <h3>Investing in Pokémon Cards - Is It Worth It?</h3>
+                <p>Find out if collecting sealed products is still profitable in 2025.</p>
+                <a href="blog-post2.html">Read More</a>
+            </div>
+
+            <div class="blog-post">
+                <img src="cdn/blog3.jpg" alt="Blog 3">
+                <h3>TCG Grading - What You Need to Know</h3>
+                <p>PSA vs. CGC vs. Beckett - which is better for your collection?</p>
+                <a href="blog-post3.html">Read More</a>
+            </div>
+
         </div>
 
-        <div class="blog-post">
-            <h3>What's New in Pokémon TCG?</h3>
-            <p>Explore all the new cards and upcoming sets in Pokémon TCG. See what’s exciting players in 2025!</p>
-            <a href="blog-post2.html">Read More</a>
-        </div>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Pokemon News</a></li>
+                <li><a href="#">TCG Investing</a></li>
+                <li><a href="#">Product Reviews</a></li>
+                <li><a href="#">Market Trends</a></li>
+            </ul>
 
-        <div class="blog-post">
-            <h3>How to Build a Competitive Deck for Beginners</h3>
-            <p>Learn the basics of building a competitive deck for new players, from card selection to strategies!</p>
-            <a href="blog-post3.html">Read More</a>
-        </div>
+            <h3>Recent Posts</h3>
+            <ul>
+                <li><a href="blog-post1.html">Journey Together - A Must Buy?</a></li>
+                <li><a href="blog-post2.html">Best Cards to Invest in 2025</a></li>
+                <li><a href="blog-post3.html">Should You Grade Your Cards?</a></li>
+            </ul>
+        </aside>
 
-    </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2025 ImportedCardGames | All Rights Reserved
+    </footer>
 
 </body>
 </html>
